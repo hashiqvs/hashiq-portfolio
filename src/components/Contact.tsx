@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, FileText, Send, CheckCircle2 } from "lucide-react";
+import { Mail, FileText, Send, CheckCircle2, MessageCircle } from "lucide-react";
 import { Github, Linkedin } from "./BrandIcons";
 
 export const Contact: React.FC = () => {
@@ -12,8 +12,14 @@ export const Contact: React.FC = () => {
     {
       icon: <Mail className="text-purple-400" size={16} />,
       label: "Email Address",
-      value: "hashiqvs.work@gmail.com",
-      link: "mailto:hashiqvs.work@gmail.com",
+      value: "hashiqvs350@gmail.com",
+      link: "mailto:hashiqvs350@gmail.com",
+    },
+    {
+      icon: <MessageCircle className="text-purple-400" size={16} />,
+      label: "WhatsApp Number",
+      value: "+91 70124 76319",
+      link: "https://wa.me/917012476319",
     },
     {
       icon: <Linkedin className="text-purple-400" size={16} />,
