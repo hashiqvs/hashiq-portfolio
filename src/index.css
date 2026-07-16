@@ -11,6 +11,72 @@
   --color-brand-bg: #050510;
 }
 
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(20px, -20px, 0) scale(1.05);
+  }
+  100% {
+    transform: translate3d(-18px, 18px, 0) scale(0.98);
+  }
+}
+
+.animate-float {
+  animation: float 5.5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.26), rgba(168, 85, 247, 0) 70%);
+  filter: blur(70px);
+  pointer-events: none;
+  animation: drift 16s ease-in-out infinite alternate;
+  opacity: 0.9;
+}
+
+.ambient-orb-one {
+  inset: -8rem auto auto -6rem;
+  width: 24rem;
+  height: 24rem;
+}
+
+.ambient-orb-two {
+  inset: auto -7rem -8rem auto;
+  width: 22rem;
+  height: 22rem;
+  animation-duration: 18s;
+  animation-direction: alternate-reverse;
+}
+
 /* Glassmorphism Utility Classes */
 @utility glass {
   background: rgba(10, 10, 22, 0.4);

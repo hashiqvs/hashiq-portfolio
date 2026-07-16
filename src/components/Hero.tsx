@@ -8,6 +8,7 @@ export const Hero: React.FC = () => {
     "SQL",
     "Power BI",
     "Machine Learning",
+    "Deep Learning",
     "Data Visualization",
     "Git & Github",
   ];
@@ -52,7 +53,7 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl sm:text-2xl font-bold tracking-tight text-white/80 font-display"
           >
-            Data Analyst & Machine Learning Developer
+            Data Analyst | Machine Learning & Deep Learning Developer
           </motion.h2>
 
           <motion.p
@@ -61,7 +62,7 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-sm sm:text-base leading-relaxed text-white/60 max-w-xl"
           >
-            I enjoy transforming data into meaningful insights through analytics, visualization and machine learning solutions that solve real-world problems.
+            I build intelligent solutions that turn data into insight through analytics, interactive visualizations, and machine learning and deep learning models that solve real-world problems.
           </motion.p>
 
           {/* Tech Badges */}
@@ -88,30 +89,36 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="flex flex-wrap gap-4 pt-4"
           >
-            <a
+            <motion.a
               href="/resume.pdf"
               download
+              whileHover={{ y: -3, scale: 1.02 }}
+              whileTap={{ scale: 0.97 }}
               className="px-6 py-3 rounded-lg bg-white hover:bg-white/90 text-black font-semibold text-xs tracking-wider uppercase flex items-center gap-2 transition-all cursor-pointer shadow-md"
             >
               <FileText size={14} />
               Download Resume
-            </a>
+            </motion.a>
 
-            <button
+            <motion.button
               onClick={() => scrollToSection("projects")}
+              whileHover={{ y: -3, scale: 1.02 }}
+              whileTap={{ scale: 0.97 }}
               className="px-6 py-3 rounded-lg border border-purple-500/20 hover:border-purple-500 bg-purple-500/5 hover:bg-purple-500/10 text-white font-semibold text-xs tracking-wider uppercase flex items-center gap-2 transition-all cursor-pointer"
             >
               View Projects
               <ArrowRight size={14} />
-            </button>
+            </motion.button>
 
-            <button
+            <motion.button
               onClick={() => scrollToSection("contact")}
+              whileHover={{ y: -3, scale: 1.02 }}
+              whileTap={{ scale: 0.97 }}
               className="px-6 py-3 rounded-lg border border-white/5 hover:border-white/10 bg-white/5 hover:bg-white/10 text-white font-semibold text-xs tracking-wider uppercase flex items-center gap-2 transition-all cursor-pointer"
             >
               <Mail size={14} />
               Contact Me
-            </button>
+            </motion.button>
           </motion.div>
         </div>
 
@@ -121,18 +128,19 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
+            whileHover={{ y: -6, scale: 1.01 }}
             className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96"
           >
             {/* Ambient Purple Backdrop Shadow Glow */}
             <div className="absolute inset-0 rounded-full bg-purple-500/10 blur-3xl animate-pulse-glow" />
 
             {/* Circular Profile Container */}
-            <div className="w-full h-full rounded-full border border-white/5 bg-white/[0.02] backdrop-blur-md p-4 animate-float flex items-center justify-center">
+            <div className="w-full h-full rounded-full border border-white/5 bg-white/[0.02] backdrop-blur-md p-4 flex items-center justify-center shadow-[0_0_40px_rgba(139,92,246,0.08)]">
               <div className="w-full h-full rounded-full overflow-hidden border-2 border-purple-500/20 shadow-2xl relative">
                 <img
                   src="/profile.jpg"
                   alt="Hashiq VS Portrait"
-                  className="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                  className="w-full h-full object-cover grayscale-[15%] transition-all duration-700"
                 />
               </div>
             </div>

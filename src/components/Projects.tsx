@@ -142,9 +142,10 @@ export const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 relative overflow-hidden">
+    <section id="projects" className="py-24 sm:py-28 relative overflow-hidden">
       {/* Background neon light */}
-      <div className="absolute top-1/4 left-10 w-96 h-96 bg-purple-950/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-10 w-96 h-96 bg-purple-950/18 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-0 w-72 h-72 bg-indigo-950/16 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6">
         
@@ -180,10 +181,10 @@ export const Projects: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="rounded-xl border border-white/5 bg-[#0a0a16]/40 backdrop-blur-md overflow-hidden flex flex-col justify-between transition-all duration-300 hover:scale-[1.01] hover:border-purple-500/20 group"
+              className="rounded-2xl border border-white/8 bg-white/[0.03] backdrop-blur-md overflow-hidden flex flex-col justify-between transition-all duration-300 hover:scale-[1.01] hover:border-purple-500/20 group shadow-[0_0_0_1px_rgba(255,255,255,0.02)]"
             >
               {/* Card visual header */}
-              <div className="h-40 bg-[#070715] p-4 flex items-center justify-center relative overflow-hidden border-b border-white/5">
+              <div className="h-40 bg-[#070715] p-4 flex items-center justify-center relative overflow-hidden border-b border-white/8">
                 {project.preview}
               </div>
 

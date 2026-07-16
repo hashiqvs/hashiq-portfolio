@@ -52,7 +52,7 @@ export const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="py-24 sm:py-28 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Section Header */}
@@ -118,9 +118,9 @@ export const About: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.05 }}
-              className="p-6 rounded-xl border border-white/5 bg-[#0a0a16]/40 backdrop-blur-md glow-hover flex flex-col items-start text-left"
+              className="p-6 rounded-2xl border border-white/8 bg-white/[0.03] backdrop-blur-md glow-hover flex flex-col items-start text-left shadow-[0_0_0_1px_rgba(255,255,255,0.02)]"
             >
-              <div className="p-3 rounded-lg bg-purple-500/10 border border-purple-500/20 mb-6">
+              <div className="p-3 rounded-xl bg-purple-500/10 border border-purple-500/20 mb-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
                 {card.icon}
               </div>
               <h4 className="text-sm font-bold font-display tracking-tight text-white mb-4 uppercase">
