@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Outfit", system-ui, -apple-system, sans-serif;
+  --font-display: "Outfit", sans-serif;
+
+  --color-brand-purple: #8b5cf6;
+  --color-brand-purple-glow: #a855f7;
+  --color-brand-bg: #050510;
+}
+
+/* Glassmorphism Utility Classes */
+@utility glass {
+  background: rgba(10, 10, 22, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+@utility glow-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  &:hover {
+    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.05);
+  }
+}
+
+/* Global scroll styling */
+html {
+  scroll-behavior: smooth;
+  background-color: #050510;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  background-color: #050510;
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050510;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.35);
+}
+
+/* Text Gradients */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #ffffff, #e9d5ff, #c084fc);
+}
+
+.text-gradient-purple {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #a855f7, #8b5cf6);
+}
